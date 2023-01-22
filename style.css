@@ -5,7 +5,6 @@
 }
 
 body {
-  /* color: #070707; */
   font-family: "PT Sans", sans-serif;
   font-size: 18px;
   letter-spacing: 0.8px;
@@ -82,7 +81,7 @@ main #hero-content > h3 {
 main button {
   margin: 10px 0;
   padding: 20px 40px;
-  background-color: rgb(93, 170, 233);
+  background-color: #1779CB;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -104,7 +103,6 @@ section#movies-list > div {
   display: flex;
   gap: 30px;
   padding: 50px;
-  /* margin-bottom: 50px; */
 }
 
 .movie-card {
@@ -119,11 +117,10 @@ section#movies-list > div {
 }
 
 .movie-card > button {
-  /* padding: absolute; */
   width: 100%;
   margin: 20px 0;
   padding: 20px 40px;
-  background-color: rgb(93, 170, 233);
+  background-color: #1779CB;
   color: #070707;
   color: white;
   letter-spacing: 0.7px;
@@ -131,6 +128,10 @@ section#movies-list > div {
   font-weight: 700;
   border: none;
   cursor: pointer;
+}
+
+button:hover {
+	background-color: #3A93DD;
 }
 
 /* Location */
