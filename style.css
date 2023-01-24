@@ -42,7 +42,7 @@ header {
 }
 
 nav {
-  max-width: 1500px;
+  max-width: 1200px;
   margin: auto;
   padding: 25px 0;
   display: flex;
@@ -104,7 +104,7 @@ section#movies-list h2 {
 }
 
 section#movies-list > div {
-  max-width: 1500px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   gap: 40px;
@@ -153,7 +153,7 @@ section#location-section {
   font-size: 35px;
 }
 section#location-section > div {
-  max-width: 1500px;
+  max-width: 1200px;
   margin: auto;
   display: flex;
   gap: 40px;
