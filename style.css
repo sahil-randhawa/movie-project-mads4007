@@ -164,7 +164,7 @@ section#location-section > div {
 #contact-info {
   flex: 1;
   height: 600px;
-  padding: 40px;
+/*   padding: 40px; */
   background-color: white;
   border-radius: 10px;
   display: flex;
