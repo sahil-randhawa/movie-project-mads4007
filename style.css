@@ -23,6 +23,7 @@ h6 {
 a {
   text-decoration: none;
   color: white;
+  text-shadow: 0 0 5pc black;
 }
 
 ul,
@@ -31,14 +32,13 @@ li {
   list-style: none;
 }
 
-/* .container {
-} */
+/* header */
 
 header {
   position: fixed;
   z-index: 1;
   width: 100vw;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.8);
 }
 
 nav {
@@ -50,7 +50,15 @@ nav {
   justify-content: space-around;
   align-items: center;
 }
+header > nav > li > a > img {
+  max-height: 60px;
+}
 
+header a:hover {
+  color: #fd8721;
+}
+
+/* main - hero section */
 main > img {
   display: block;
   width: 100%;
@@ -66,8 +74,8 @@ main > div#hero-content {
   right: 8%;
   color: white;
   text-align: center;
-  background-color: rgba(0, 0, 0, 0.25);
-  text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
+  text-shadow: 0 0 5px black;
   padding: 2.5vw;
 }
 main > div#hero-content > p {
@@ -84,7 +92,7 @@ main > div#hero-content > h3 {
 main button {
   margin: 10px 0;
   padding: 20px 40px;
-  background-color: #1779cb;
+  background-color: #fd7b0c;
   border: none;
   cursor: pointer;
   border-radius: 5px;
@@ -126,7 +134,7 @@ section#movies-list > div {
   width: 100%;
   margin: 20px 0;
   padding: 20px 40px;
-  background-color: #1779cb;
+  background-color: #fd7b0c;
   color: #070707;
   color: white;
   letter-spacing: 0.7px;
@@ -134,17 +142,25 @@ section#movies-list > div {
   font-weight: 700;
   border: none;
   cursor: pointer;
+  border-radius: 5px;
+}
+
+.movie-card > button.btn-secondary {
+  background-color: #fff1e5;
+  border: 1px solid #fd7b0c;
+  color: #fd7b0c;
 }
 
 button:hover {
-  background-color: #3a93dd;
+  background-color: #fd8721;
+  color: #fafafa;
 }
 
 /* Location */
 
 section#location-section {
   background-color: #d7edff;
-  padding-bottom: 40px;
+  padding: 0 30px 40px;
 }
 
 #location-section h2 {
@@ -164,7 +180,7 @@ section#location-section > div {
 #contact-info {
   flex: 1;
   height: 600px;
-/*   padding: 40px; */
+  /*   padding: 40px; */
   background-color: white;
   border-radius: 10px;
   display: flex;
@@ -172,6 +188,9 @@ section#location-section > div {
   justify-content: center;
   gap: 20px;
   align-items: center;
+}
+#contact-info > img {
+  width: 200px;
 }
 #map {
   flex: 1;
@@ -189,20 +208,36 @@ section#location-section > div {
 
 /* footer */
 footer {
-  background-color: black;
-  color: wheat;
-  text-align: center;
-  padding: 20px;
+  background-color: #100700;
+   color: #fafafa;
+   text-align: center;
+   padding: 20px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
 }
-
 
 footer div {
-	font-size: 30px;
-	margin:15px;
+  font-size: 30px;
+  margin: 15px;
 }
 footer div a {
-	margin:30px;
+  margin: 30px;
 }
 footer div a:hover {
-	color: #1779cb;
+  color: #fd7b0c;
+}
+
+/* Movie Deatils Page */
+
+/* navigation */
+#details-page header {
+  position: static;
+  background-color: #000;
+}
+
+#details-page section {
+  padding: 20px;
+  background-color: magenta;
+  height: 400px;
 }
