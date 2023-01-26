@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Featured Movie</title>
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous"
+    referrerpolicy="no-referrer"
+  />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="details-page">
+    <!-- Navigation -->
+    <header>
+        <nav>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="#">Now Playing</a></li>
+          <li><a href="./index.html"><img src="./assets/logo-dark-bg.png" alt="" /></a></li>
+          <li><a href="./purchase.html">Buy Tickets</a></li>
+          <li><a href="#location">Location</a></li>
+        </nav>
+      </header>
+      <!-- Movie details section -->
+      <section>
+        <div id="movie-trailer">
+          <iframe width="100%" height="400px" src="https://www.youtube.com/embed/Y5zqweZAEKI?autoplay=1" title="Puss In Boots" frameborder="0" allowfullscreen></iframe>
+          </iframe>
+          <div>
+            <p><i class="fa fa-film" aria-hidden="true"></i> 102 min</p>
+            <p><i class="fa fa-calendar" aria-hidden="true"></i> December 21, 2022</p>
+            <p>IMDB: <span>7.8 <i class="fa fa-star" aria-hidden="true"></i></span> / 10</p>
+            <!-- <p><strong>Release date: </strong> December 21, 2022</p>
+            <p><strong>Run Time: </strong> 102 min</p>
+            <p><strong>IMDB: </strong> <span>7.8 </span> / 10</p> -->
+          </div>
+
+        </div>
+        <div id="movie-details">
+          <h1>PUSS IN BOOTS</h1>
+          <p class="subtext">Animation | Adventure | Comedy | Family </p>
+          <p>When Puss in Boots discovers that his passion for adventure has taken its toll and he has burned through eight of his nine lives, he launches an epic journey to restore them by finding the mythical Last Wish. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt esse enim, cupiditate provident aliquam et. Eius placeat quasi ipsum nemo! Totam, laboriosam illo? Excepturi illo eius ullam id. Tempore Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam, tempore.</p>
+          
+        </div>
+      </section>
+
+      <!-- Showtimes section -->
+      <section id="showtimes">
+        <h1>Showtimes</h1>
+        <div>
+            <div>
+              <button class="btn-date">27 Jan 2023</button>
+              <a href="./purchase.html"><button class="btn-show" data-showdate="27-Jan-2023" data-showtime="1 PM">1 PM</button></a>
+              <a href="./purchase.html"><button class="btn-show" data-showdate="27-Jan-2023" data-showtime="3 PM">2 PM</button></a>
+              <a href="./purchase.html"><button class="btn-show" data-showdate="27-Jan-2023" data-showtime="6 PM">6 PM</button></a>
+            </div>
+            <div>
+              <button class="btn-date">28 Jan 2023</button>
+              <a href="./purchase.html"><button class="btn-show" data-showdate="28-Jan-2023" data-showtime="2:30 PM">2:30 PM</button></a>
+              <a href="./purchase.html"><button class="btn-show" data-showdate="28-Jan-2023" data-showtime="4 PM">4 PM</button></a>
+              <button class="btn-show" data-showdate="28-Jan-2023" data-showtime="soldout">SOLD OUT</button>
+              <a href="./purchase.html"><button class="btn-show" data-showdate="28-Jan-2023" data-showtime="8 PM">9 PM</button>
+
+            </div>
+            <div>
+              <button class="btn-date">29 Jan 2023</button>
+              <a href="./purchase.html"><button class="btn-show" data-showdate="29-Jan-2023" data-showtime="4 PM">2 PM</button></a>
+              <button class="btn-show" data-showdate="29-Jan-2023" data-showtime="soldout">SOLD OUT</button>
+              <a href="./purchase.html"><button class="btn-show" data-showdate="29-Jan-2023" data-showtime="8 PM">8 PM</button></a>
+              <button class="btn-show" data-showdate="29-Jan-2023" data-showtime="soldout">SOLD OUT</button>
+
+            </div>
+        </div>
+
+      </section>
+
+      <!-- Footer -->
+    <footer>
+      <p>© 2023 APEX Cinema House</p>
+      <div>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i> </a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </footer>
+
+
+    <script type="text/javascript" src="./app.js"></script>
+</body>
+</html>

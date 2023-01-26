@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Purchase</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./purchase.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+
+  <body id="purchase-page">
+    <!-- Navigation -->
+    <header>
+      <nav>
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="./movie_details.html">Now Playing</a></li>
+        <li>
+          <a href="./index.html"
+            ><img src="./assets/logo-dark-bg.png" alt="logo"
+          /></a>
+        </li>
+        <li><a href="./purchase.html">Buy Tickets</a></li>
+        <li><a href="./index.html#location">Location</a></li>
+      </nav>
+    </header>
+
+    <section id="purchase-section">
+      <div id="ticket-form">
+        <form action="" id="form">
+          <h2>Tickets</h2>
+          <div class="general-div">
+            <label for="general">General Entry : $8</label>
+            <div class="quantity">
+              <input
+                type="button"
+                value="-"
+                class="qtyminus"
+                field="quantity"
+              />
+              <input type="text" name="quantity" value="0" class="qty" />
+              <input type="button" value="+" class="qtyplus" field="quantity" />
+            </div>
+          </div>
+
+          <div class="special-div">
+            <label for="special">Senior/Student : $5</label>
+            <div class="quantity">
+              <input
+                type="button"
+                value="-"
+                class="qtyminus"
+                field="quantity"
+              />
+              <input type="text" name="quantity" value="0" class="qty" />
+              <input type="button" value="+" class="qtyplus" field="quantity" />
+            </div>
+          </div>
+
+          <h2>Payment</h2>
+          <div class="paypal-div">
+            <label for="paypal">
+              <input type="radio" name="paypal" id="paypal" />
+              Paypal
+            </label>
+            <span class="paypal-icon"></span>
+          </div>
+          <div class="cards-div">
+            <label for="card">
+              <input type="radio" name="card" id="card" />
+              Credit or Debit Card
+            </label>
+            <span class="card-icon"></span>
+          </div>
+
+          <button type="submit" id="pay-now">Pay Now</button>
+        </form>
+      </div>
+
+      <!-- Order Summary -->
+      <div id="order-summary-section">
+        <img
+          src="https://assets-prd.ignimgs.com/2022/03/14/pussinboots-blogroll-1647280577032.png"
+          alt="Movie Poster"
+        />
+        <div class="movie-details">
+          <h2>Puss In Boots</h2>
+          <p>
+            Showtime:
+            <span
+              ><span id="showDate-text">Date</span> at
+              <span id="showTime-text">Time</span></span
+            >
+          </p>
+          <ul>
+            <li>Ticket Type: <span>Standard</span></li>
+            <li>Quantity: <span>4</span></li>
+            <li>Price: <span>$40</span></li>
+          </ul>
+          <p>Subtotal: <span>$160</span></p>
+          <p>Fees: <span>$10</span></p>
+          <p>Total to Pay: <span>$170</span></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Paypal Section -->
+    <section id="paypal-section">
+      <form action="">
+        <h2>Payment Information</h2>
+        <div class="paypal-div">
+          <label for="paypal">
+            <input type="radio" name="paypal" id="paypal" checked />
+            Paypal
+          </label>
+          <span class="paypal-icon"></span>
+          <input
+            type="email"
+            name="email"
+            id="paypal-email"
+            placeholder="Enter your paypal email address"
+          />
+          <input
+            type="password"
+            name="password"
+            id="paypal-password"
+            placeholder="Enter your paypal password"
+          />
+        </div>
+        <div class="cards-div">
+          <label for="card">
+            <input type="radio" name="card" id="card" disabled />
+            Credit or Debit Card
+          </label>
+          <span class="card-icon"></span>
+        </div>
+
+        <button type="submit" id="pay-now">Pay Now</button>
+      </form>
+    </section>
+
+    <!-- Credit Card Section -->
+    <section id="card-section">
+      <form action="">
+        <h2>Payment Information</h2>
+        <div class="paypal-div">
+          <label for="paypal">
+            <input type="radio" name="paypal" id="paypal" disabled />
+            Paypal
+          </label>
+          <span class="paypal-icon"></span>
+        </div>
+        <div class="cards-div">
+          <label for="card">
+            <input type="radio" name="card" id="card" checked />
+            Credit or Debit Card
+          </label>
+          <span class="card-icon"></span>
+          <input type="text" placeholder="Credit Card number" />
+          <input type="text" placeholder="CVV" />
+        </div>
+        <button type="submit" id="pay-now">Pay Now</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+		<p>© 2023 APEX Cinema House</p>
+		<div>
+		  <a href="#"><i class="fab fa-twitter"></i></a>
+		  <a href="#"><i class="fab fa-facebook"></i> </a>
+		  <a href="#"><i class="fab fa-instagram"></i></a>
+		</div>
+	  </footer>
+
+    <!-- JavaScript File -->
+    <!-- <script type="text/javascript" src="./app.js"></script> -->
+	<script type="text/javascript" src="./purchase.js"></script>
+  </body>
+</html>

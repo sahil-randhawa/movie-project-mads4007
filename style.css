@@ -135,7 +135,6 @@ section#movies-list > div {
   margin: 20px 0;
   padding: 20px 40px;
   background-color: #fd7b0c;
-  color: #070707;
   color: white;
   letter-spacing: 0.7px;
   font-size: 20px;
@@ -151,7 +150,7 @@ section#movies-list > div {
   color: #fd7b0c;
 }
 
-button:hover {
+.btn-primary:hover {
   background-color: #fd8721;
   color: #fafafa;
 }
@@ -231,13 +230,120 @@ footer div a:hover {
 /* Movie Deatils Page */
 
 /* navigation */
-#details-page header {
+#details-page header, #purchase-page header {
   position: static;
   background-color: #000;
 }
 
 #details-page section {
   padding: 20px;
-  background-color: magenta;
-  height: 400px;
+  /* background-color: magenta; */
+}
+
+#details-page section {
+  display: flex;
+  width: 1200px;
+  margin: auto;
+  gap: 20px;
+  padding: 40px ;
+}
+
+
+div#movie-trailer {
+  flex: 50%;
+}
+
+div#movie-trailer > div {
+  margin: 20px 0 5px;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #fff1e5;
+  color: #fd7b0c;
+}
+
+div#movie-trailer > div span {
+  color:#fd7b0c;
+}
+
+#movie-details {
+  padding: 30px;
+  flex:50%;
+}
+
+#movie-details > h1 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.subtext {
+  color:#fd7b0c;
+  font-size: 15px;
+  margin: 20px auto;
+  line-height: 2;
+  width: fit-content;
+}
+#movie-details p {
+  text-align: justify;
+}
+
+/* movie showtimes section */
+section#showtimes {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: #d7edff;
+}
+section#showtimes > h1 {
+  text-align: center;
+}
+
+#showtimes > div {
+  width: max-content;
+  margin:auto;
+}
+
+#showtimes > div > div {
+  margin: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.btn-date, .btn-show {
+  padding: 8px 10px;
+  background-color: transparent;
+}
+
+.btn-date {
+  background-color: white;
+  color: #fd7b0c;
+  border: none;
+  border-radius: 20px;
+  padding: 8px 25px;
+  font-weight: 700;
+}
+
+.btn-show {
+  width: 100px;
+  border: 1.8px dashed rgb(19, 183, 19);
+  background-color: rgb(243, 251, 243);
+  cursor: pointer;
+}
+#showtimes a {
+  color: black;
+}
+.btn-show:hover {
+  background-color: aquamarine;
+}
+
+[data-showtime="soldout"] {
+  border: 2px dashed red;
+  background-color: rgb(255, 232, 232);
+}
+
+[data-showtime="soldout"]:hover {
+  background-color: lightslategrey;
+  color: #fff;
+  border: none;
 }
