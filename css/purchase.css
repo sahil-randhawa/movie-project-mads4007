@@ -1,0 +1,250 @@
+/* Purchase HTML */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+section#purchase-section {
+  display: flex;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: 50px auto;
+  gap: 40px;
+  /* border: 2px solid aqua; */
+}
+
+#ticket-form {
+  width: 50%;
+  margin: auto;
+  height: fit-content;
+  /* padding: 50px; */
+}
+
+#ticket-form form {
+  padding: 60px;
+  margin-right: 40px;
+  border: 2px solid rgba(255, 147, 52, 0.3);
+  border-radius: 20px;
+}
+
+#ticket-form form h2 {
+  /* padding-bottom: 30px; */
+  margin: 30px 0;
+}
+
+#ticket-form .general-div,
+.special-div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  padding-bottom: 40px;
+  align-items: center;
+}
+
+#ticket-form form input {
+  display: inline-block;
+}
+
+#ticket-form .general-div > div {
+  margin-left: 130px;
+}
+
+#ticket-form .special-div > div {
+  margin-left: 120px;
+}
+
+.qty {
+  width: 40px;
+  height: 32px;
+  text-align: center;
+  border: 1px solid #100700;
+  border-radius: 5px;
+  font-size: 18px;
+  margin: 0 5px 0 5px;
+}
+input.qtyplus,
+.qtyminus {
+  width: 32px;
+  height: 32px;
+  border: 1px solid #100700;
+  border-radius: 5px;
+  font-size: 18px;
+  background-color: transparent;
+  color: #fd7b0c;
+}
+
+#special-div {
+  width: 50%;
+  padding: 0 1rem;
+}
+
+input#general-qty, input#special-qty {
+   text-align: center;
+   font-size: 18px;
+   padding: 5px;
+   border: 1px solid #100700;
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button {  
+
+   opacity: 1;
+
+}
+
+#ticket-form > form{
+  position: relative;
+}
+
+#ticket-error {
+  position: absolute;
+  top: 105px;
+  left: 200px;
+  background-color: rgb(255, 184, 184);
+}
+
+/* Payment */
+
+.paypal-div,
+.cards-div {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  align-items: center;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px dashed black;
+}
+
+.paypal-div input[type="radio"],
+.cards-div input[type="radio"] {
+  margin-right: 10px;
+  height: 20px;
+  width: 20px;
+  position: relative;
+  top: 4px;
+}
+
+.paypal-div .paypal-icon {
+  width: 24px;
+  height: 24px;
+  background: url(https://www.paypalobjects.com/webstatic/icon/pp32.png)
+    no-repeat center center;
+}
+
+.cards-div {
+  margin-top: 20px;
+}
+
+.paypal-fields-div input,
+.cards-fields-div input {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+}
+
+.cards-fields-div input::-webkit-outer-spin-button,
+.cards-fields-div input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.paypal-fields-div,
+.cards-fields-div {
+  display: none;
+}
+
+.error-message {
+  display: block;
+  width: fit-content;
+  font-size: 12px;
+  font-weight: bold;
+  color: red;
+  padding: 4px 6px;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  margin: -5px 0 5px;
+  display: none;
+}
+
+/* #ticket-form .cards-div .card-icon {
+  width: 24px;
+  height: 24px;
+  background: url() no-repeat center center;
+} */
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #fd7b0c;
+  color: white;
+  letter-spacing: 0.7px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+button:hover {
+  background-color: #fd8721;
+  color: #fafafa;
+}
+
+button#pay-now {
+  margin-top: 20px;
+}
+
+/* Order receipt details */
+#order-summary-section {
+  width: 50%;
+  /* padding: 100px; */
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+#order-summary-section img {
+  display: block;
+  width: 80%;
+  height: auto;
+  /* padding-bottom: 50px; */
+}
+
+.movie-details {
+  width: 100%;
+  margin: 40px 10%;
+}
+
+.movie-details h2 {
+  margin-bottom: 20px;
+}
+
+.movie-details ul {
+  list-style: none;
+  margin: 10px 0;
+  padding: 10px 0;
+}
+
+.movie-details li,
+p {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 5px 0;
+}
+
+.movie-details p {
+  margin: 10px 0;
+}
+
+/* Paypal Section */
+section#paypal-section,
+section#card-section {
+  display: flex;
+  max-width: 1200px;
+  margin: 20px auto 50px;
+}
