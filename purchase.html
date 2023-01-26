@@ -42,7 +42,7 @@
           /></a>
         </li>
         <li><a href="./purchase.html">Buy Tickets</a></li>
-        <li><a href="./index.html#location">Location</a></li>
+        <li><a href="./index.html#location-section">Location</a></li>
       </nav>
     </header>
 
@@ -53,46 +53,56 @@
           <div class="general-div">
             <label for="general">General Entry : $8</label>
             <div class="quantity">
-              <input
-                type="button"
-                value="-"
-                class="qtyminus"
-                field="quantity"
-              />
-              <input type="text" name="quantity" value="0" class="qty" />
-              <input type="button" value="+" class="qtyplus" field="quantity" />
+              <input type="number" name="general" id="general-qty" min="0" max="10" value="0"/>
             </div>
           </div>
 
           <div class="special-div">
             <label for="special">Senior/Student : $5</label>
             <div class="quantity">
-              <input
-                type="button"
-                value="-"
-                class="qtyminus"
-                field="quantity"
-              />
-              <input type="text" name="quantity" value="0" class="qty" />
-              <input type="button" value="+" class="qtyplus" field="quantity" />
+              <input type="number" name="special" id="special-qty" min="0" max="10" value="0"/>
             </div>
           </div>
 
-          <h2>Payment</h2>
+          <h2>Payment Information</h2>
+
+          <div id="payment-method-container">
           <div class="paypal-div">
-            <label for="paypal">
-              <input type="radio" name="paypal" id="paypal" />
+            <label for="pay-by-paypal">
+              <input type="radio" name="payment-method" id="pay-by-paypal" />
               Paypal
             </label>
             <span class="paypal-icon"></span>
           </div>
+          <div class="paypal-fields-div">
+            <input
+              type="email"
+              name="email"
+              id="paypal-email"
+              placeholder="Enter your paypal email address"
+            />
+            <label for="email" id="email-error" class="error-message">Username or Email is required</label>
+            <input
+              type="password"
+              name="password"
+              id="paypal-password"
+              placeholder="Enter your paypal password"
+            /><label for="password" id="password-error" class="error-message">Password can't be empty.</label>
+          </div>
           <div class="cards-div">
-            <label for="card">
-              <input type="radio" name="card" id="card" />
+            <label for="pay-by-card">
+              <input type="radio" name="payment-method" id="pay-by-card" />
               Credit or Debit Card
             </label>
             <span class="card-icon"></span>
           </div>
+          <div class="cards-fields-div">
+            <input type="number" placeholder="Credit Card number (16 digits)" id="ccnumber"/>
+            <label for="ccnumber" id="ccn-error" class="error-message">Please Enter a valid Credit Card Number of 16 digits.</label>
+          <input type="number" placeholder="CCV (3 digit)" id="ccv"/>
+          <label for="ccv" id="ccv-error" class="error-message">Please enter 3 digit CCV on back of your card.</label>
+          </div>
+        </div>
 
           <button type="submit" id="pay-now">Pay Now</button>
         </form>
@@ -105,6 +115,27 @@
           alt="Movie Poster"
         />
         <div class="movie-details">
+          <h2>Puss In Boots</h2>
+          <p>
+            Showtime:
+            <span><span id="showDate-text">Date</span> at
+              <span id="showTime-text">Time</span></span>
+          </p>
+          <ul id="general-summary">
+            <li>Ticket Type: <span>General</span></li>
+            <li>Quantity: <span id="general-display"></span></li>
+            <li>Price: <span id="general-price"></span></li>
+          </ul>
+          <ul id="special-summary">
+            <li>Ticket Type: <span>Senior/Student</span></li>
+            <li>Quantity: <span id="special-display"></span></li>
+            <li>Price: <span id="special-price"></span></li>
+          </ul>
+          <p>Subtotal: <span id="sub-total"></span></p>
+          <p>Tax (13%): <span id="tax"></span></p>
+          <p>Total to Pay: <span id="net-total"></span></p>
+        </div>
+        <!-- <div class="movie-details">
           <h2>Puss In Boots</h2>
           <p>
             Showtime:
@@ -121,12 +152,12 @@
           <p>Subtotal: <span>$160</span></p>
           <p>Fees: <span>$10</span></p>
           <p>Total to Pay: <span>$170</span></p>
-        </div>
+        </div> -->
       </div>
     </section>
 
     <!-- Paypal Section -->
-    <section id="paypal-section">
+    <!-- <section id="paypal-section">
       <form action="">
         <h2>Payment Information</h2>
         <div class="paypal-div">
@@ -158,10 +189,10 @@
 
         <button type="submit" id="pay-now">Pay Now</button>
       </form>
-    </section>
+    </section> -->
 
     <!-- Credit Card Section -->
-    <section id="card-section">
+    <!-- <section id="card-section">
       <form action="">
         <h2>Payment Information</h2>
         <div class="paypal-div">
@@ -182,20 +213,20 @@
         </div>
         <button type="submit" id="pay-now">Pay Now</button>
       </form>
-    </section>
+    </section> -->
 
     <!-- Footer -->
     <footer>
-		<p>© 2023 APEX Cinema House</p>
-		<div>
-		  <a href="#"><i class="fab fa-twitter"></i></a>
-		  <a href="#"><i class="fab fa-facebook"></i> </a>
-		  <a href="#"><i class="fab fa-instagram"></i></a>
-		</div>
-	  </footer>
+      <p>© 2023 APEX Cinema House</p>
+      <div>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-facebook"></i> </a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+      </div>
+    </footer>
 
     <!-- JavaScript File -->
     <!-- <script type="text/javascript" src="./app.js"></script> -->
-	<script type="text/javascript" src="./purchase.js"></script>
+    <script type="text/javascript" src="./purchase.js"></script>
   </body>
 </html>

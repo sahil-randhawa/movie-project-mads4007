@@ -20,7 +20,6 @@ section#purchase-section {
   margin: auto;
   height: fit-content;
   /* padding: 50px; */
-
 }
 
 #ticket-form form {
@@ -31,7 +30,8 @@ section#purchase-section {
 }
 
 #ticket-form form h2 {
-  padding-bottom: 30px;
+  /* padding-bottom: 30px; */
+  margin: 30px 0;
 }
 
 #ticket-form .general-div,
@@ -89,7 +89,9 @@ input.qtyplus,
   justify-content: flex-start;
   gap: 20px;
   align-items: center;
-  padding: 15px;
+  padding: 8px;
+  margin: 10px 0;
+  border: 1px dashed black;
 }
 
 .paypal-div input[type="radio"],
@@ -108,14 +110,50 @@ input.qtyplus,
     no-repeat center center;
 }
 
-#ticket-form .cards-div .card-icon {
+.cards-div {
+  margin-top: 20px;
+}
+
+.paypal-fields-div input,
+.cards-fields-div input {
+  display: block;
+  width: 100%;
+  margin: 8px 0;
+  padding: 10px;
+}
+
+.cards-fields-div input::-webkit-outer-spin-button,
+.cards-fields-div input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.paypal-fields-div,
+.cards-fields-div {
+  display: none;
+}
+
+.error-message {
+  display: block;
+  width: fit-content;
+  font-size: 12px;
+  font-weight: bold;
+  color: red;
+  padding: 4px 6px;
+  border-radius: 8px;
+  letter-spacing: 1px;
+  margin: -5px 0 5px;
+  display: none;
+}
+
+/* #ticket-form .cards-div .card-icon {
   width: 24px;
   height: 24px;
   background: url() no-repeat center center;
-}
+} */
 
 button {
-  margin: 20px 10px;
+  margin-top: 20px;
   padding: 10px 20px;
   background-color: #fd7b0c;
   color: white;
@@ -131,11 +169,11 @@ button:hover {
   color: #fafafa;
 }
 
-#pay-now {
+button#pay-now {
   margin-top: 20px;
 }
 
-/* Order */
+/* Order receipt details */
 #order-summary-section {
   width: 50%;
   /* padding: 100px; */
@@ -146,7 +184,7 @@ button:hover {
 }
 
 #order-summary-section img {
-	display: block;
+  display: block;
   width: 80%;
   height: auto;
   /* padding-bottom: 50px; */
@@ -168,7 +206,8 @@ button:hover {
   padding-bottom: 30px;
 }
 
-.movie-details li, p {
+.movie-details li,
+p {
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -180,12 +219,9 @@ button:hover {
 }
 
 /* Paypal Section */
-section#paypal-section, section#card-section {
+section#paypal-section,
+section#card-section {
   display: flex;
   max-width: 1200px;
-  margin:20px auto 50px;
-}
-
-section#card-section {
-	/* display: none; */
+  margin: 20px auto 50px;
 }

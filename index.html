@@ -5,7 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Your Movie Tickets Now!</title>
-    <link rel="stylesheet" href="style.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Vollkorn:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awsome -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
@@ -13,6 +25,17 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+
+    <!-- Leaflet CSS -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+      crossorigin=""
+    />
+
+    <!-- style css -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <!-- Navigation -->
@@ -35,7 +58,7 @@
         <p>Now Playing</p>
         <h1>Puss in Boots</h1>
         <h3>Feb 04 - 10</h3>
-        <button class="btn-primary">View Details</button>
+        <a href="./movie_details.html"><button class="btn-primary">View Details</button></a>
       </div>
     </main>
 
@@ -45,7 +68,7 @@
       <div>
         <div class="movie-card">
           <img src="./assets/puss-in-the-boots.JPG" alt="Avatar 2" />
-          <button class="btn-primary">View Details</button>
+          <a href="./movie_details.html"><button class="btn-primary">View Details</button></a>
         </div>
         <div class="movie-card">
           <img src="./assets/antman.jpg" alt="Antman 3" />
@@ -54,6 +77,7 @@
         <div class="movie-card">
           <img src="./assets/creed3.jpg" alt="Creed 3" />
           <button class="btn-secondary">Coming Soon</button>
+          <span id="location"></span>
         </div>
       </div>
     </section>
@@ -71,10 +95,6 @@
           <p>Customer Service: +1-345-432-8769</p>
         </div>
         <div id="map">
-          <img
-            src="https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/pass/GoogleMapTA.jpg"
-            alt=""
-          />
           <!-- map of theatre location -->
         </div>
       </div>
@@ -89,6 +109,14 @@
         <a href="#"><i class="fab fa-instagram"></i></a>
       </div>
     </footer>
+
+    <!-- Leaflet JavaScript File -->
+    <script
+      src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+      integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+      crossorigin=""
+    ></script>
+    <script type="text/javascript" src="./map.js"></script>
 
     <!-- <script type="text/javascript" src="app.js"></script> -->
   </body>
