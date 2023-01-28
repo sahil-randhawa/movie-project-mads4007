@@ -1,4 +1,4 @@
-# movie-project-mads4007
+# movie-project-MADS4007
 
 ## Build a website for a local movie theatre
 
