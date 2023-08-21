@@ -1,6 +1,6 @@
 # movie-project-MADS4007
 
-###A website for a local movie theatre
+### A website for a local movie theatre
 
 A project I built as a part of my course at George Brown College Toronto.
 
