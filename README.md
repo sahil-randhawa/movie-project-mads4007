@@ -1,8 +1,8 @@
 # movie-project-MADS4007
 
-## Build a website for a local movie theatre
+A website for a local movie theatre
 
-A project I built as a part of my course at George Brown College Toronto.
+_A project I built as a part of my course at George Brown College Toronto._
 
 Live Demo: https://sahil-randhawa.github.io/movie-project-mads4007/
 
